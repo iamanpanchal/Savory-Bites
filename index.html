@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savory Bites</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  
+<!-- Navigation Bar -->
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Savory Bites</a>
+            
+            <!-- Mobile Menu Toggle (Checkbox Hack) -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="mobile-menu-label" aria-label="Toggle Menu">
+                <!-- Hamburger Icon SVG -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </label>
+
+            <!-- Desktop Navigation Links -->
+            <div class="nav-links">
+                <a href="menu.html" class="nav-link">Menu</a>
+                <a href="#about" class="nav-link">Our Story</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="form.html" class="cta-button">Order Now</a>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu Dropdown Content -->
+        <!-- This div is toggled visible by the CSS Checkbox Hack -->
+        <div id="mobile-menu" class="container">
+            <a href="menu.html" class="mobile-menu-link">Menu</a>
+            <a href="#about" class="mobile-menu-link">Our Story</a>
+            <a href="#contact" class="mobile-menu-link">Contact</a>
+            <a href="form.html" class="mobile-menu-link cta-button" style="text-align: center; margin-top: 0.5rem;">Order Now</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" >
+        <!-- Background Image/Overlay -->
+        <div class="hero-bg"></div>
+
+        <div class="container hero-content">
+            <h1 class="hero-title">
+                Taste the <span>Extraordinary.</span>
+            </h1>
+            <p class="hero-subtitle">
+                Crafting modern culinary experiences from fresh, local ingredients. Enjoy elevated dining, delivered right to your door.
+            </p>
+            <a href="menu.html" class="hero-btn pulse-effect">
+                Explore Menu
+            </a>
+            <p class="hero-info">Fast delivery available daily until 10 PM.</p>
+        </div>
+    </section>
+
+    <!-- Menu Highlights Section -->
+    <section id="menu" style="background-color: var(--background);">
+        <div class="container" style="text-align: center;">
+            <h2 style="font-size: 2.25rem; font-weight: 700; margin-bottom: 1rem;">Our Signature Dishes</h2>
+            <p style="font-size: 1.25rem; color: #6b7280; margin-bottom: 3rem; max-width: 48rem; margin-left: auto; margin-right: auto;">
+                Hand-picked favorites that define the 'Savory Bites' experience. Perfect for any occasion.
+            </p>
+
+            <div class="menu-grid">
+                
+                <!-- Menu Item 1: Truffle Pasta -->
+                <div class="menu-item">
+                    <img src="assets/pasta.jpg" alt="Truffle Mushroom Pasta">
+                    <h3>Black Truffle Pasta</h3>
+                    <p>Homemade pappardelle, wild mushrooms, cream sauce, and fresh black truffle shavings.</p>
+                    <span>$28</span>
+                    <button>Add to Cart</button>
+                </div>
+
+                <!-- Menu Item 2: Seared Scallops -->
+                <div class="menu-item">
+                    <img src="assets/pan.jpg" alt="Seared Scallops">
+                    <h3>Pan-Seared Scallops</h3>
+                    <p>Perfectly seared scallops served with a light lemon butter sauce and seasonal asparagus.</p>
+                    <span>$32</span>
+                    <button>Add to Cart</button>
+                </div>
+
+                <!-- Menu Item 3: Vegan Glory Bowl -->
+                <div class="menu-item">
+                    <img src="assets/bowl.jpg" alt="Vegan Glory Bowl">
+                    <h3>The Glory Bowl (V)</h3>
+                    <p>Quinoa, sweet potato, black beans, avocado, and a vibrant cilantro-lime vinaigrette.</p>
+                    <span>$22</span>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            
+            <a href="menu.html" class="menu-full-link">
+                View Full Menu
+            </a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <div class="container">
+            <div class="about-content-wrapper">
+                <!-- Image -->
+                <div class="about-image">
+                    <img src="assets/interior.jpg" alt="Modern Restaurant Interior">
+                </div>
+                
+                <!-- Content -->
+                <div class="about-text">
+                    <p>Our Commitment</p>
+                    <h2>More Than Just a Meal</h2>
+                    <p class="paragraph">
+                        Savory Bites was founded in 2024 by two passionate chefs with a shared vision: to make elevated dining accessible and effortless. We believe that great food starts with great sourcing. Our ingredients are locally sourced from sustainable farms, ensuring every dish is packed with flavor and integrity.
+                    </p>
+                    <p class="paragraph">
+                        From our kitchen to your table, we strive for perfection. We look forward to serving you a memorable culinary experience.
+                    </p>
+                    <a href="#contact" class="about-cta-btn">
+                        Meet the Chefs
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <!-- Logo & Social -->
+                <div class="footer-col" style="grid-column: span 1;">
+                    <h3>Savory Bites</h3>
+                    <p style="margin-bottom: 1.5rem;">Elevated dining, delivered.</p>
+                    <div class="social-links" style="display: flex;">
+                        <!-- Placeholder Social Icons SVGs -->
+                        <a href="#" style="width: 24px; height: 24px;">
+                            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M7 10v4h2v-4H7zm4 0v4h2v-4h-2zm4 0v4h2v-4h-2zm-8 7h10v2H7z"/></svg>
+                        </a>
+                        <a href="#" style="width: 24px; height: 24px;">
+                            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 16H9v-6h2v6zm4 0h-2v-6h2v6zm1-8h-2V6h2v4z"/></svg>
+                        </a>
+                        <a href="#" style="width: 24px; height: 24px;">
+                            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-6 16h-2v-2h2v2zm4 0h-2v-2h2v2zm-4-4h-2v-2h2v2zm4 0h-2v-2h2v2zm-4-4h-2V9h2v2zm4 0h-2V9h2v2z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#menu">Full Menu</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Location & Hours -->
+                <div class="footer-col">
+                    <h4>Visit Us</h4>
+                    <p style="margin-bottom: 0.5rem;">123 Culinary Ave, Food City, CA 90210</p>
+                    <p style="font-weight: 700; margin-bottom: 1rem;">Reservations: (555) 123-4567</p>
+                    <h5 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">Hours:</h5>
+                    <p>Mon - Fri: 11:00 AM - 10:00 PM</p>
+                    <p>Sat - Sun: 10:00 AM - 11:00 PM</p>
+                </div>
+
+                <!-- Newsletter Signup -->
+                <div class="footer-col newsletter">
+                    <h4>Stay Updated</h4>
+                    <p style="margin-bottom: 1rem;">Get exclusive deals and new menu announcements.</p>
+                    <form onsubmit="document.getElementById('newsletter-msg').style.display='block'; this.reset(); return false;">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                        <p id="newsletter-msg" class="newsletter-msg">Thank you for subscribing!</p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright">
+                &copy; 2024 Savory Bites. All rights reserved. Crafted with Passion.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
