@@ -1,0 +1,251 @@
+
+        /* CSS Variables for Consistency */
+        :root {
+            --primary: #8b5cf6;     /* Indigo-500 */
+            --secondary: #fb923c;   /* Orange-400 */
+            --background: #f3f4f6;  /* Light Gray background */
+            --form-bg: #ffffff;     /* White form card */
+            --dark-gray: #1f2937;   /* Dark Gray */
+            --text-color: var(--dark-gray);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Base & Global Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Container for Centering Form */
+        .order-container {
+            width: 100%;
+            max-width: 800px;
+            padding: 2rem 1rem;
+            flex-grow: 1; /* Allows the container to take up available space */
+        }
+
+        /* Header Bar */
+        header {
+            width: 100%;
+            background-color: var(--form-bg);
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+        }
+        
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+        
+        .home-link {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            background-color: var(--secondary);
+            color: white;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            text-decoration: none;
+        }
+        
+        .home-link:hover {
+            background-color: #f97316;
+        }
+
+        /* Form Styling */
+        .order-form-card {
+            background-color: var(--form-bg);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-lg);
+            margin-top: 2rem;
+        }
+
+        .form-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+        
+        fieldset {
+            border: 2px solid var(--primary);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        legend {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--dark-gray);
+            padding: 0 0.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #4b5563; /* gray-600 */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db; /* gray-300 */
+            border-radius: 0.5rem;
+            box-sizing: border-box; /* Important for padding/width calculation */
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 5rem;
+        }
+
+        .grid-half {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        /* Menu Items List */
+        .menu-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .menu-item-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #e5e7eb; /* gray-200 */
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s;
+        }
+
+        .menu-item-row:hover {
+            background-color: #f9fafb; /* light hover */
+        }
+        
+        .item-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .item-info input[type="radio"] {
+            margin-right: 0.75rem;
+        }
+        
+        .item-info label {
+            margin-bottom: 0;
+            font-weight: 600;
+            display: inline;
+        }
+        
+        .item-price {
+            font-weight: 700;
+            color: var(--secondary);
+            width: 5rem;
+            text-align: right;
+        }
+
+        /* Order Button */
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--primary);
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 700;
+            border-radius: 0.5rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-top: 2rem;
+        }
+
+        .submit-btn:hover {
+            background-color: #6d28d9; /* indigo-700 */
+            transform: translateY(-2px);
+        }
+        
+        /* Confirmation Message (Pure CSS Styling) */
+        .confirmation-box {
+            background-color: #d1fae5; /* green-100 */
+            color: #065f46; /* green-900 */
+            border: 2px solid #34d399; /* green-400 */
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            text-align: center;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            display: none; /* Hidden by default */
+        }
+
+        /* Footer */
+        footer {
+            width: 100%;
+            background-color: var(--dark-gray);
+            color: #9ca3af;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 0.875rem;
+            margin-top: auto; /* Pushes the footer to the bottom */
+        }
+
+
+        /* ========================================================= */
+        /* --- MEDIA QUERIES (Responsive Design) --- */
+        /* ========================================================= */
+
+        @media (min-width: 640px) {
+            .grid-half {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .order-container {
+                padding: 3rem 1rem;
+            }
+            .order-form-card {
+                padding: 3rem;
+            }
+            .form-group.full-width {
+                grid-column: span 2;
+            }
+        }

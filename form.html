@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Food</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  
+ <!-- Navigation Header -->
+    <header>
+        <div class="header-content">
+            <h1 class="logo">Order Now</h1>
+            <a href="index.html" class="home-link">← Back to Menu</a>
+        </div>
+    </header>
+
+    <!-- Order Form Container -->
+    <div class="order-container">
+        <div class="order-form-card">
+            <h2 class="form-title">Your Culinary Order</h2>
+            
+            <!-- 
+                Pure CSS Form Submission:
+                Since JS is forbidden, we use a simple action to simulate submission.
+                The URL below will trigger a page load/refresh, but we'll include a placeholder 
+                message later to demonstrate what a successful submission might look like 
+                (though it can't be dynamically shown without JS).
+            -->
+            <form action="index.html" method="get">
+                
+                <!-- Contact Details -->
+                <fieldset>
+                    <legend>1. Contact Information</legend>
+                    <div class="grid-half">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+                    </div>
+                </fieldset>
+
+                <!-- Menu Selection -->
+                <fieldset>
+                    <legend>2. Select Your Dishes</legend>
+                    <ul class="menu-list">
+                        <!-- Item 1: Truffle Pasta -->
+                        <li class="menu-item-row">
+                            <div class="item-info">
+                                <input type="radio" id="pasta" name="dish" value="truffle_pasta" required>
+                                <label for="pasta">Black Truffle Pasta</label>
+                            </div>
+                            <div class="item-price">$28</div>
+                        </li>
+
+                        <!-- Item 2: Seared Scallops -->
+                        <li class="menu-item-row">
+                            <div class="item-info">
+                                <input type="radio" id="scallops" name="dish" value="seared_scallops">
+                                <label for="scallops">Pan-Seared Scallops</label>
+                            </div>
+                            <div class="item-price">$32</div>
+                        </li>
+
+                        <!-- Item 3: Vegan Glory Bowl -->
+                        <li class="menu-item-row">
+                            <div class="item-info">
+                                <input type="radio" id="glory_bowl" name="dish" value="glory_bowl">
+                                <label for="glory_bowl">The Glory Bowl (V)</label>
+                            </div>
+                            <div class="item-price">$22</div>
+                        </li>
+                    </ul>
+                    
+                    <div class="form-group" style="margin-top: 1.5rem;">
+                        <label for="quantity">Quantity (for selected item):</label>
+                        <input type="number" id="quantity" name="quantity" value="1" min="1" max="10" required>
+                    </div>
+                </fieldset>
+
+                <!-- Delivery Details -->
+                <fieldset>
+                    <legend>3. Delivery Details</legend>
+                    <div class="form-group">
+                        <label for="address">Delivery Address</label>
+                        <textarea id="address" name="address" placeholder="Street Address, City, State, Zip Code" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="notes">Special Requests / Dietary Notes (Optional)</label>
+                        <textarea id="notes" name="notes" placeholder="e.g., No cilantro, extra napkins, deliver to back door."></textarea>
+                    </div>
+                </fieldset>
+                
+                <button type="submit" class="submit-btn">
+                    Place Order Now
+                </button>
+            </form>
+            
+            <!-- 
+                This message cannot be dynamically shown on submit without JS.
+                It is styled here for completeness, but an actual application 
+                would require a server response or client-side logic to display it.
+            -->
+            <div class="confirmation-box" style="margin-top: 1.5rem;">
+                <!-- This message would typically appear after a real submission. -->
+                Order received! Thank you. We'll contact you shortly for payment.
+            </div>
+
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Savory Bites. Order Hotline: (555) 123-4567.
+    </footer>
+
+</body>
+</html>
