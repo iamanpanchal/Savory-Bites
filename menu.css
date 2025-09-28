@@ -1,0 +1,170 @@
+:root {
+            --primary: #8b5cf6;     /* Indigo-500 */
+            --secondary: #fb923c;   /* Orange-400 */
+            --background: #fdfcf9;  /* Off-white / Cream */
+            --dark-gray: #1f2937;   /* Dark Gray */
+            --text-color: var(--dark-gray);
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Base & Global Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        /* Header Bar */
+        header {
+            width: 100%;
+            background-color: white;
+            box-shadow: var(--shadow-sm);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.875rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .cta-button {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            background-color: var(--secondary);
+            color: white;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            text-decoration: none;
+        }
+        
+        .cta-button:hover {
+            background-color: #f97316;
+        }
+        
+        /* Menu Layout */
+        #full-menu {
+            padding: 3rem 0 5rem 0;
+        }
+        
+        .menu-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-gray);
+            margin-bottom: 0.5rem;
+        }
+        
+        .menu-subtitle {
+            text-align: center;
+            font-size: 1.125rem;
+            color: #6b7280;
+            margin-bottom: 3rem;
+        }
+
+        /* Category Styling */
+        .menu-category {
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .category-header {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--secondary);
+            padding-left: 0.75rem;
+        }
+
+        /* Dish List */
+        .dish-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .dish-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 1rem 0;
+            border-bottom: 1px dashed #e5e7eb;
+        }
+
+        .dish-content {
+            flex-grow: 1;
+            padding-right: 1.5rem;
+        }
+        
+        .dish-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--dark-gray);
+            margin-bottom: 0.25rem;
+        }
+        
+        .dish-description {
+            font-size: 0.95rem;
+            color: #6b7280;
+        }
+
+        .dish-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+            flex-shrink: 0;
+        }
+        
+        /* Last item in category needs no bottom border */
+        .dish-list .dish-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Footer */
+        footer {
+            width: 100%;
+            background-color: var(--dark-gray);
+            color: #9ca3af;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 0.875rem;
+        }
+
+
+        /* --- MEDIA QUERIES --- */
+        @media (max-width: 600px) {
+            .menu-title {
+                font-size: 2rem;
+            }
+            .dish-price {
+                font-size: 1.25rem;
+            }
+        }
